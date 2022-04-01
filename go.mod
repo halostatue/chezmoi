@@ -47,7 +47,7 @@ require (
 	github.com/twpayne/go-xdg/v4 v4.0.0
 	github.com/xanzy/ssh-agent v0.3.0 // indirect
 	github.com/yuin/goldmark v1.3.2 // indirect
-	github.com/zalando/go-keyring v0.1.1
+	github.com/zalando/go-keyring v0.2.1
 	go.etcd.io/bbolt v1.3.5
 	go.uber.org/multierr v1.6.0
 	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83 // indirect
