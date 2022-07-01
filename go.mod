@@ -11,7 +11,7 @@ require (
 	github.com/coreos/go-semver v0.3.0
 	github.com/go-git/go-git/v5 v5.4.2
 	github.com/google/go-github/v44 v44.0.0
-	github.com/google/gops v0.3.23
+	github.com/google/gops v0.3.24
 	github.com/google/renameio/v2 v2.0.0
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79
 	github.com/mitchellh/mapstructure v1.5.0
@@ -34,7 +34,7 @@ require (
 	go.uber.org/multierr v1.8.0
 	golang.org/x/oauth2 v0.0.0-20220411215720-9780585627b5
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.0.0-20220503163025-988cb79eb6c6
+	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a
 	golang.org/x/term v0.0.0-20220411215600-e5f449aeb171
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 	howett.net/plist v1.0.0
