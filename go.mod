@@ -17,7 +17,7 @@ require (
 	github.com/charmbracelet/glamour v0.6.0
 	github.com/coreos/go-semver v0.3.1
 	github.com/fsnotify/fsnotify v1.6.0
-	github.com/go-git/go-git/v5 v5.7.0
+	github.com/go-git/go-git/v5 v5.8.1
 	github.com/google/go-github/v53 v53.2.0
 	github.com/google/renameio/v2 v2.0.0
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79
@@ -54,6 +54,7 @@ require (
 )
 
 require (
+	dario.cat/mergo v1.0.0 // indirect
 	github.com/Masterminds/goutils v1.1.1 // indirect
 	github.com/Masterminds/semver/v3 v3.2.1 // indirect
 	github.com/Microsoft/go-winio v0.6.1 // indirect
