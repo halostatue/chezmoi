@@ -37,7 +37,7 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/tailscale/hujson v0.0.0-20221223112325-20486734a56a
 	github.com/twpayne/go-pinentry v0.3.0
-	github.com/twpayne/go-vfs/v4 v4.2.0
+	github.com/twpayne/go-vfs/v4 v4.3.0
 	github.com/twpayne/go-xdg/v6 v6.1.1
 	github.com/ulikunitz/xz v0.5.11
 	github.com/withfig/autocomplete-tools/integrations/cobra v1.2.1
