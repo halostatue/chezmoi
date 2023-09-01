@@ -5,7 +5,7 @@ go 1.19
 require (
 	filippo.io/age v1.1.1
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.3.1
-	github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azsecrets v1.0.0
+	github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azsecrets v1.0.1
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/Shopify/ejson v1.4.1
 	github.com/alecthomas/assert/v2 v2.3.0
