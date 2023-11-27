@@ -11,7 +11,7 @@ require (
 	github.com/alecthomas/assert/v2 v2.4.0
 	github.com/aws/aws-sdk-go-v2 v1.23.1
 	github.com/aws/aws-sdk-go-v2/config v1.25.5
-	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.23.3
+	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.24.0
 	github.com/bmatcuk/doublestar/v4 v4.6.1
 	github.com/bradenhilton/mozillainstallhash v1.0.1
 	github.com/charmbracelet/bubbles v0.16.1
