@@ -52,7 +52,7 @@ require (
 	golang.org/x/term v0.14.0
 	gopkg.in/ini.v1 v1.67.0
 	gopkg.in/yaml.v3 v3.0.1
-	howett.net/plist v1.0.0
+	howett.net/plist v1.0.1
 	mvdan.cc/sh/v3 v3.7.0
 )
 
