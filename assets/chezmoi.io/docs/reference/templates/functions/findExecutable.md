@@ -1,5 +1,7 @@
 # `findExecutable` *file* *path-list*
 
+<!-- md:version 2.4.1 -->
+
 `findExecutable` searches for an executable named *file* in directories
 identified by *path-list*. The result will be the executable file concatenated
 with the matching path. If an executable *file* cannot be found in *path-list*,

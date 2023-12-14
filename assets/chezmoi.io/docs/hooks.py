@@ -10,6 +10,7 @@ from mkdocs.structure.files import Files
 non_website_paths = [
     'docs.go',
     'hooks.py',
+    'shortcodes.py',
     'reference/commands/commands.go',
     'reference/commands/commands_test.go',
 ]
