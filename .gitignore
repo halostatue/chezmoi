@@ -1,3 +1,4 @@
+/.pdm-python
 /.vagrant
 /COMMIT
 /bin/actionlint
@@ -5,9 +6,9 @@
 /bin/editorconfig-checker
 /bin/find-typos
 /bin/gofumpt
-/bin/golines
 /bin/golangci-lint
 /bin/goreleaser
+/bin/golines
 /bin/goversioninfo
 /chezmoi
 /chezmoi.exe
@@ -15,3 +16,4 @@
 /dist
 /resource_windows_*.syso
 /versioninfo.json
+

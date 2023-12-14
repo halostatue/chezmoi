@@ -282,11 +282,14 @@ jobs:
     - uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32
       with:
         go-version: ${{ env.GO_VERSION }}
+    - uses: pdm-project/setup-pdm@ddc33ca746b5716353581f988b29464200212702
+      with:
+        python-version: '3.10'
     - name: install-website-dependencies
       run: |
-        pip3 install -r assets/chezmoi.io/requirements.txt
+        pdm sync -d
     - name: build-website
-      run: mkdocs build -f assets/chezmoi.io/mkdocs.yml
+      run: pdm run -v build-docs
       env:
         CHEZMOI_GITHUB_TOKEN: ${{ secrets.CHEZMOI_GITHUB_TOKEN }}
   test-windows:
@@ -450,15 +453,18 @@ jobs:
     - uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32
       with:
         go-version: ${{ env.GO_VERSION }}
+    - uses: pdm-project/setup-pdm@ddc33ca746b5716353581f988b29464200212702
+      with:
+        python-version: '3.10'
     - name: prepare-chezmoi.io
       run: |
-        pip3 install -r assets/chezmoi.io/requirements.txt
-        mkdocs build -f assets/chezmoi.io/mkdocs.yml
+        pdm sync -d
+        pdm run -v build-docs
       env:
         CHEZMOI_GITHUB_TOKEN: ${{ secrets.CHEZMOI_GITHUB_TOKEN }}
     - name: push-chezmoi.io
       run: |
-        ( cd assets/chezmoi.io && mkdocs gh-deploy )
+        ( cd assets/chezmoi.io && pdm run deploy-docs )
     - name: prepare-get.chezmoi.io
       run: |
         cp assets/scripts/install.sh assets/get.chezmoi.io/index.html

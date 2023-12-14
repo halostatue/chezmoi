@@ -1,0 +1,65 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "chezmoi-internal-utilities"
+version = "0.0.0"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+
+[tool.pdm]
+[[tool.pdm.source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[tool.pdm.dev-dependencies]
+dev = [
+  "ruff~=0.1",
+  "ruamel.yaml~=0.18",
+  "mkdocs-material>=9.5.2",
+  "pymdown-extensions>=10.5",
+  "mkdocs-mermaid2-plugin>=1.1.1",
+]
+
+[tool.pdm.scripts]
+build-docs = "mkdocs build -f assets/chezmoi.io/mkdocs.yml"
+serve-docs = "mkdocs serve -f assets/chezmoi.io/mkdocs.yml"
+deploy-docs = { shell = "mkdocs gh-deploy" }
+lint = "ruff check {args}"
+format = "ruff format {args}"
+pycheck = { composite = ["lint", "format --diff"] }
+pyfix = { composite = ["lint --fix", "format"] }
+format-yaml = "pdm run ./assets/scripts/format-yaml.py {args}"
+
+[tool.ruff]
+include = [
+  "pyproject.toml",
+  "assets/chezmoi.io/docs/hooks.py",
+  "assets/chezmoi.io/docs/shortcodes.py",
+  "assets/scripts/format-yaml.py",
+]
+target-version = "py310"
+
+[tool.ruff.lint]
+extend-select = [
+  "A",
+  "B",
+  "E",
+  "F",
+  "I",
+  "W",
+  "ANN",
+  "COM",
+  "FA",
+  "UP",
+  "PL",
+  "PTH",
+  "SIM",
+]
+ignore = ["ANN003", "COM812"]
+
+[tool.ruff.format]
+quote-style = "single"
