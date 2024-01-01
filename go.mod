@@ -14,8 +14,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.25.5
 	github.com/bmatcuk/doublestar/v4 v4.6.1
 	github.com/bradenhilton/mozillainstallhash v1.0.1
-	github.com/charmbracelet/bubbles v0.16.1
-	github.com/charmbracelet/bubbletea v0.24.2
+	github.com/charmbracelet/bubbles v0.17.1
+	github.com/charmbracelet/bubbletea v0.25.0
 	github.com/charmbracelet/glamour v0.6.0
 	github.com/coreos/go-semver v0.3.1
 	github.com/fsnotify/fsnotify v1.7.0
