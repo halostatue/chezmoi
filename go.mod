@@ -44,7 +44,7 @@ require (
 	github.com/twpayne/go-xdg/v6 v6.1.2
 	github.com/ulikunitz/xz v0.5.11
 	github.com/withfig/autocomplete-tools/integrations/cobra v1.2.1
-	github.com/zalando/go-keyring v0.2.3
+	github.com/zalando/go-keyring v0.2.4
 	github.com/zricethezav/gitleaks/v8 v8.18.2
 	go.etcd.io/bbolt v1.3.9
 	golang.org/x/crypto v0.21.0
