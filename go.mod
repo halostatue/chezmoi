@@ -8,7 +8,7 @@ require (
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.8.1
 	github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azsecrets v1.3.0
 	github.com/Masterminds/sprig/v3 v3.3.0
-	github.com/Shopify/ejson v1.5.3
+	github.com/Shopify/ejson v1.5.4
 	github.com/alecthomas/assert/v2 v2.11.0
 	github.com/aws/aws-sdk-go-v2 v1.36.0
 	github.com/aws/aws-sdk-go-v2/config v1.29.4
@@ -21,7 +21,7 @@ require (
 	github.com/coreos/go-semver v0.3.1
 	github.com/fsnotify/fsnotify v1.8.0
 	github.com/go-git/go-git/v5 v5.13.2
-	github.com/goccy/go-yaml v1.15.16
+	github.com/goccy/go-yaml v1.15.17
 	github.com/google/go-github/v68 v68.0.0
 	github.com/google/renameio/v2 v2.0.0
 	github.com/gopasspw/gopass v1.15.15
