@@ -96,7 +96,7 @@ contents of the file.
 
 !!! warning
 
-    Modify templates must not have a `.tmpl` extension.
+    Modify templates **must not** have a `.tmpl` extension.
 
 Secondly, if only a small part of the file changes then consider using a
 template to re-generate the full contents of the file from the current state.
@@ -112,8 +112,7 @@ current-context: {{ output "kubectl" "config" "current-context" | trim }}
     For managing ini files with a mix of settings and state (such as recently
     used files or window positions), there is a third party tool called
     `chezmoi_modify_manager` that builds upon `modify_` scripts. See
-    [related software](../links/related-software.md#githubcomvorpalbladechezmoi_modify_manager)
-    for more information.
+    [related software][chezmoi_modify_manager] for more information.
 
 ## Manage a file's permissions, but not its contents
 
@@ -196,3 +195,5 @@ populating your `~/.ssh/authorized_keys`. Put the following in your
 {{   .Key }}
 {{ end -}}
 ```
+
+[chezmoi_modify_manager]: site:links/related-software/#vorpalblade/chezmoi_modify_manager

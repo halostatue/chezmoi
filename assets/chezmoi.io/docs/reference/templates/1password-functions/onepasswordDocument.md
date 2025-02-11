@@ -26,11 +26,11 @@ interactively prompted to sign in.
 !!! warning
 
     When using [1Password
-    Connect](../../../user-guide/password-managers/1password.md#1password-connect),
+    Connect](site:user-guide/password-managers/1password/#1password-connect),
     `onepasswordDocument` is not available.
 
 !!! warning
 
     When using [1Password Service
-    Accounts](../../../user-guide/password-managers/1password.md#1password-service-accounts),
+    Accounts](site:user-guide/password-managers/1password/#1password-service-accounts),
     the *account* parameter is not allowed.

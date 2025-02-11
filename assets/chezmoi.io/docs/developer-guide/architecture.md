@@ -37,18 +37,18 @@ Entries can be files, directories, symlinks, scripts, amongst other things.
 
 ## `internal/chezmoi/` directory
 
-All of chezmoi's interaction with the operating system is abstracted through
-the `System` interface. A `System` includes functionality to read and write
-files and directories and execute commands. chezmoi makes a distinction between
+All of chezmoi's interaction with the operating system is abstracted through the
+`System` interface. A `System` includes functionality to read and write files
+and directories and execute commands. chezmoi makes a distinction between
 idempotent commands that can be run multiple times without modifying the
 underlying system and arbitrary commands that may modify the underlying system.
 
 The real underlying system is implemented via a `RealSystem` struct. Other
 `System`s are composed on top of this to provide further functionality. For
 example, the `--debug` flag is implemented by wrapping the `RealSystem` with a
-`DebugSystem` that logs all calls to the underlying `RealSystem`. `--dry-run`
-is implemented by wrapping the `RealSystem` with a `DryRunSystem` that allows
-reads to pass through but silently discards all writes.
+`DebugSystem` that logs all calls to the underlying `RealSystem`. `--dry-run` is
+implemented by wrapping the `RealSystem` with a `DryRunSystem` that allows reads
+to pass through but silently discards all writes.
 
 The `SourceState` struct represents a source state, including reading a source
 state from the source directory, executing templates, applying the source state
@@ -56,8 +56,8 @@ state from the source directory, executing templates, applying the source state
 entries to the source state.
 
 Entries in the source state are abstracted by the `SourceStateEntry` interface
-implemented by the `SourceStateFile` and `SourceStateDir` structs, as the
-source state only consists of regular files and directories.
+implemented by the `SourceStateFile` and `SourceStateDir` structs, as the source
+state only consists of regular files and directories.
 
 A `SourceStateFile` includes a `FileAttr` struct describing the attributes
 parsed from its file name. Similarly, a `SourceStateDir` includes a `DirAttr`
@@ -77,9 +77,9 @@ The actual state of an entry in the target state is abstracted via the
 `ActualStateFile`, `ActualStateSymlink` structs implementing this interface.
 
 Finally, an `EntryState` struct represents a serialization of an
-`ActualEntryState` for storage in and retrieval from chezmoi's persistent
-state. It stores a SHA256 of the entry's contents, rather than the full
-contents, to avoid storing secrets in the persistent state.
+`ActualEntryState` for storage in and retrieval from chezmoi's persistent state.
+It stores a SHA256 of the entry's contents, rather than the full contents, to
+avoid storing secrets in the persistent state.
 
 With these concepts, chezmoi's apply command is effectively:
 
@@ -93,10 +93,10 @@ With these concepts, chezmoi's apply command is effectively:
    apply the minimal set of changes to the `ActualStateEntry` so that they are
    equivalent.
 
-Furthermore, chezmoi stores the `EntryState` of each entry that it writes in
-its persistent state. chezmoi can then detect if a third party has updated a
-target since chezmoi last wrote it by comparing the actual state entry in the
-target state with the entry state in the persistent state.
+Furthermore, chezmoi stores the `EntryState` of each entry that it writes in its
+persistent state. chezmoi can then detect if a third party has updated a target
+since chezmoi last wrote it by comparing the actual state entry in the target
+state with the entry state in the persistent state.
 
 ## `internal/cmd/` directory
 
@@ -119,13 +119,13 @@ chezmoi uses separate types for absolute paths (`AbsPath`) and relative paths
 paths is an error). The type `SourceRelPath` is a relative path within the
 source directory and handles file and directory attributes.
 
-Internally, chezmoi normalizes all paths to use forward slashes with an
-optional upper-cased Windows volume so they can be compared with string
-comparisons. Paths read from the user may include tilde (`~`) to represent the
-user's home directory, use forward or backward slashes, and are treated as
-external paths (`ExtPath`). These are normalized to absolute paths. chezmoi is
-case-sensitive internally and makes no attempt to handle case-insensitive or
-case-preserving file systems.
+Internally, chezmoi normalizes all paths to use forward slashes with an optional
+upper-cased Windows volume so they can be compared with string comparisons.
+Paths read from the user may include tilde (`~`) to represent the user's home
+directory, use forward or backward slashes, and are treated as external paths
+(`ExtPath`). These are normalized to absolute paths. chezmoi is case-sensitive
+internally and makes no attempt to handle case-insensitive or case-preserving
+file systems.
 
 ## Persistent state
 
@@ -151,8 +151,8 @@ contents in the `scriptState` bucket in the persistent state. On future
 invocations the script is only run if no matching contents SHA256 is found in
 the persistent state.
 
-The execution of a `run_onchange_` script is recorded by storing its target
-name in the `entryState` bucket along with its contents SHA256 sum. On future
+The execution of a `run_onchange_` script is recorded by storing its target name
+in the `entryState` bucket along with its contents SHA256 sum. On future
 invocations the script is only run if its contents SHA256 sum has changed, and
 its contents SHA256 sum is then updated in the persistent state.
 
@@ -170,13 +170,12 @@ You can run individual end-to-end tests with
 go test ./internal/cmd -run=TestScript/$TEST_NAME
 ```
 
-Tests should, if at all possible, run unmodified on all operating systems
-tested in CI (Linux, macOS, Windows, and FreeBSD). Windows will sometimes need
-special handling due to its path separator and lack of POSIX-style file
-permissions.
+Tests should, if at all possible, run unmodified on all operating systems tested
+in CI (Linux, macOS, Windows, and FreeBSD). Windows will sometimes need special
+handling due to its path separator and lack of POSIX-style file permissions.
 
 [go-docs]: https://pkg.go.dev/github.com/twpayne/chezmoi/v2
 [website]: https://chezmoi.io
-[testscript]: https://pkg.go.dev/github.com/rogpeppe/go-internal/testscript                                     |
+[testscript]: https://pkg.go.dev/github.com/rogpeppe/go-internal/testscript
 [ref]: site:reference/concepts
 [assert]: https://pkg.go.dev/github.com/alecthomas/assert

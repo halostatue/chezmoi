@@ -4,8 +4,8 @@
 
 Manage your dotfiles across multiple diverse machines, securely.
 
-The latest version of chezmoi is {{ $version }} ([release notes]({{
-$latestRelease.HTMLURL }}), [release history](site:reference/release-history)).
+The latest version of chezmoi is {{ $version }} ([release notes][notes],
+[release history][history]).
 
 ## What does chezmoi do?
 
@@ -30,7 +30,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
 ```
 
 As well as the `curl | sh` installation, you can [install chezmoi with your
-favorite package manager](site:install).
+favorite package manager][install].
 
 Updating your dotfiles on any machine is a single command:
 
@@ -43,17 +43,16 @@ statically-linked binary with no dependencies, and does not require root access.
 
 ## How do I start with chezmoi?
 
-[Install chezmoi](site:install) then read the [quick start
-guide](site:quick-start). The [user guide](site:user-guide/setup) covers most
-common tasks. For a full description, consult the [reference](site:reference).
+[Install chezmoi][install] then read the [quick start guide][quick-start]. The
+[user guide][guide] covers most common tasks. For a full description, consult
+the [reference][reference].
 
 ## Should I use chezmoi?
 
-See what other people think about chezmoi by reading
-[articles](site:links/articles), listening to [podcasts](site:links/podcasts),
-and watching [videos](site:links/videos) about chezmoi. Read how [chezmoi
-compares to other dotfile managers](site:comparison-table). Explore other
-people's [dotfile repos that use chezmoi](site:links/dotfile-repos).
+See what other people think about chezmoi by reading [articles][articles],
+listening to [podcasts][podcasts], and watching [videos][videos] about chezmoi.
+Read how [chezmoi compares to other dotfile managers][compares]. Explore other
+people's [dotfile repos that use chezmoi][repos].
 
 ## How do I get help using chezmoi?
 
@@ -62,24 +61,40 @@ this page using a few, short, and specific keywords related to your problem.
 
 chezmoi is an open source project with tens of thousands of users, so it is very
 likely that someone else has already encountered and solved your problem. Search
-[chezmoi's GitHub repo](https://github.com/twpayne/chezmoi) for issues and
-discussions with keywords related to your problem.
+[chezmoi's GitHub repo][github] for issues and discussions with keywords related
+to your problem.
 
 If your question is still unanswered, please [open a GitHub issue for
-support](https://github.com/twpayne/chezmoi/issues/new?assignees=&labels=support&projects=&template=01_support_request.md&title=).
+support][support].
 
 ## I like chezmoi. How do I say thanks?
 
-Please [give chezmoi a star on
-GitHub](https://github.com/twpayne/chezmoi/stargazers).
+Please [give chezmoi a star on GitHub][star].
 
-[Share chezmoi](site:links/social-media) and, if you're happy to share your
-public dotfiles repo, then [tag your repo with
-`chezmoi`](site:links/dotfile-repos).
+[Share chezmoi][share] and, if you're happy to share your public dotfiles repo,
+then [tag your repo with `chezmoi`][tag].
 
-[Contributions are very welcome](site:developer-guide/contributing-changes) and
-every [bug report, support request, and feature request][issues] helps make
-chezmoi better. Thank you :)
+[Contributions are very welcome][contributions] and every [bug report, support
+request, and feature request][issues] helps make chezmoi better. Thank you :)
 
 chezmoi does not accept financial contributions. Instead, please make a donation
 to a charity or cause of your choice.
+
+[articles]: site:links/articles/
+[compares]: site:comparison-table/
+[contributions]: site:developer-guide/contributing-changes/
+[github]: https://github.com/twpayne/chezmoi
+[guide]: site:user-guide/setup/
+[history]: site:reference/release-history/
+[install]: site:install/
+[issues]: https://github.com/twpayne/chezmoi/issues
+[notes]: {{ $latestRelease.HTMLURL }}
+[podcasts]: site:links/podcasts/
+[quick-start]: site:quick-start/
+[reference]: site:reference/
+[repos]: site:links/dotfile-repos/
+[share]: site:links/social-media/
+[star]: https://github.com/twpayne/chezmoi/stargazers
+[support]: https://github.com/twpayne/chezmoi/issues/new?assignees=&labels=support&projects=&template=01_support_request.md&title=.
+[tag]: site:links/dotfile-repos/
+[videos]: site:links/videos

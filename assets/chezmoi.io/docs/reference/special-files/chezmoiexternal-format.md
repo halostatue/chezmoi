@@ -164,4 +164,4 @@ re-download unless forced. To force chezmoi to re-download URLs, pass the
     ```
 
     Some more examples can be found in the [user
-    guide](../../user-guide/include-files-from-elsewhere.md).
+    guide](site:user-guide/include-files-from-elsewhere/).
