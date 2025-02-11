@@ -125,7 +125,7 @@ comparisons. Paths read from the user may include tilde (`~`) to represent the
 user's home directory, use forward or backward slashes, and are treated as
 external paths (`ExtPath`). These are normalized to absolute paths. chezmoi is
 case-sensitive internally and makes no attempt to handle case-insensitive or
-case-preserving filesystems.
+case-preserving file systems.
 
 ## Persistent state
 

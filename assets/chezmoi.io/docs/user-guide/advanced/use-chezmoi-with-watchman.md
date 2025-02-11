@@ -5,7 +5,7 @@ automatically run `chezmoi apply` whenever your source state changes, but there
 are some limitations because Watchman runs actions in the background without a
 terminal.
 
-Firstly, Watchman spawns a server which runs actions when filesystems change.
+Firstly, Watchman spawns a server which runs actions when file systems change.
 This server reads its environment variables when it is started, typically on the
 first invocation of the `watchman` command. If you use a password manager that
 uses environment variables to persist login sessions, then you must login to

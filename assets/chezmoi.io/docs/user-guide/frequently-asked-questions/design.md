@@ -147,13 +147,13 @@ for dotfiles. If this does cause a genuine problem for you, please [open an
 issue on GitHub](https://github.com/twpayne/chezmoi/issues/new/choose).
 
 File permissions and modes like `executable_`, `private_`, `readonly_`, and
-`symlink_` could also be stored in the filesystem, rather than in the filename.
+`symlink_` could also be stored in the file system, rather than in the filename.
 However, this requires the permissions to be preserved and handled by the
-underlying version control system and filesystem. chezmoi provides first-class
+underlying version control system and file system. chezmoi provides first-class
 support for Windows, where the `executable_` and `private_` attributes have no
 direct equivalents and symbolic links are not always permitted. By using
 regular files and directories, chezmoi avoids variations in the operating
-system, version control system, and filesystem making it both more robust and
+system, version control system, and file system making it both more robust and
 more portable.
 
 chezmoi uses a 1:1 mapping between entries in the source state and entries in
@@ -187,7 +187,7 @@ but must meet the following criteria, in order of importance:
 1. Be fully backwards-compatible for existing users.
 2. Fix a genuine problem encountered in practice.
 3. Be independent of the underlying operating system, version control system,
-   and filesystem.
+   and file system.
 4. Not add significant extra complexity to the user interface or underlying
    implementation.
 
@@ -341,7 +341,7 @@ runas -wait` to your script.
 chezmoi, by default, operates on your home directory but this can be overridden
 with the `--destination` command line flag or by specifying `destDir` in your
 config file, and could even be the root directory (`/` or `C:\`). This allows
-you, in theory, to use chezmoi to manage any file in your filesystem, but this
+you, in theory, to use chezmoi to manage any file in your file system, but this
 usage is extremely strongly discouraged.
 
 If your needs extend beyond modifying a handful of files outside your target

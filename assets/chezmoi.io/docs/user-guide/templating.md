@@ -37,7 +37,7 @@ These come from a variety of sources (later data overwrite earlier ones):
 * Variables created by you in the `data` section of the configuration file.
 
 Furthermore, chezmoi provides a variety of functions to retrieve data at runtime
-from password managers, environment variables, and the filesystem.
+from password managers, environment variables, and the file system.
 
 ## Creating a template file
 
