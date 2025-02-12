@@ -6,14 +6,14 @@ manual][external].
 
 ## Include a subdirectory from a URL
 
-To include a subdirectory from another repository, e.g. [Oh My
-Zsh](https://github.com/ohmyzsh/ohmyzsh), you cannot use git submodules because
-chezmoi uses its own format for the source state and Oh My Zsh is not
-distributed in this format. Instead, you can use the `.chezmoiexternal.$FORMAT`
-file to tell chezmoi to import dotfiles from an external source.
+To include a subdirectory from another repository, e.g. [Oh My Zsh][ohmyzsh],
+you cannot use git submodules because chezmoi uses its own format for the source
+state and Oh My Zsh is not distributed in this format. Instead, you can use the
+`.chezmoiexternal.$FORMAT` file to tell chezmoi to import dotfiles from an
+external source.
 
-For example, to import Oh My Zsh, the [zsh-syntax-highlighting
-plugin][zsh-highlighting], and [powerlevel10k][p10k], put the following in
+For example, to import Oh My Zsh, the [zsh-syntax-highlighting plugin][hlplug],
+and [powerlevel10k][p10k], put the following in
 `~/.local/share/chezmoi/.chezmoiexternal.toml`:
 
 ```toml title="~/.local/share/chezmoi/.chezmoiexternal.toml"
@@ -95,7 +95,7 @@ Use `include` pattern filters to include only selected files from an archive
 URL.
 
 For example, to import just the required source files of the
-[zsh-syntax-highlighting plugin][zsh-highlighting] in the example above, add in
+[zsh-syntax-highlighting plugin][hlplug] in the example above, add in
 `include` filter to the `zsh-syntax-highlighting` section as shown below:
 
 ```toml title="~/.local/share/chezmoi/.chezmoiexternal.toml"
@@ -259,7 +259,7 @@ configuration variable to `false`.
 
 [external]: site:reference/special-files/chezmoiexternal-format/
 [ohmyzsh]: https://github.com/ohmyzsh/ohmyzsh
-[zsh-highlighting]: https://github.com/zsh-users/zsh-syntax-highlighting
+[hlplug]: https://github.com/zsh-users/zsh-syntax-highlighting
 [p10k]: https://github.com/romkatv/powerlevel10k
 [ignore]: site:reference/special-files/chezmoiignore/
 [plug.vim]: https://github.com/junegunn/vim-plug/blob/master/plug.vim

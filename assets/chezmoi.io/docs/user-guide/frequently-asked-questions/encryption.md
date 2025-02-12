@@ -2,7 +2,7 @@
 
 ## How do I configure chezmoi to encrypt files but only request a passphrase the first time `chezmoi init` is run?
 
-The following steps use [age](https://age-encryption.org/) for encryption.
+The following steps use [age][age] for encryption.
 
 This can be achieved with the following process:
 
@@ -107,7 +107,8 @@ encryption, the following steps can be used:
 1. Make sure you have applied all encrypted files (e.g. `chezmoi apply` decrypts
    files and places them in their destinations).
 2. Update chezmoi configuration to use the new encryption method (examples:
-   [gpg][gpg], [age][age], [age with one-time passphrase][age-passphrase]).
+   [gpg][site-gpg], [age][site-age], [age with one-time
+   passphrase][age-passphrase]).
 3. Remove all encrypted files from the state via `chezmoi forget` or `chezmoi unmanage`.
 4. Add them back with `chezmoi add --encrypt`.
 
@@ -141,6 +142,7 @@ do
 done
 ```
 
-[gpg]: site:user-guide/encryption/gpg/
-[age]: site:user-guide/encryption/age/
+[site-gpg]: site:user-guide/encryption/gpg/
+[site-age]: site:user-guide/encryption/age/
 [age-passphrase]: #how-do-i-configure-chezmoi-to-encrypt-files-but-only-request-a-passphrase-the-first-time-chezmoi-init-is-run
+[age]: https://age-encryption.org/
