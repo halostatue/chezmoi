@@ -142,7 +142,7 @@ for example:
 ```
 
 For a full description of the template syntax, see the [`text/template`
-documentation][go-template]].
+documentation][go-template].
 
 ### Removing whitespace
 

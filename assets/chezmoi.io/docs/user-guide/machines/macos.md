@@ -2,7 +2,7 @@
 
 ## Use `brew bundle` to manage your brews and casks
 
-Homebrew's [`brew bundle` subcommand][bundle]] allows you to specify a list of
+Homebrew's [`brew bundle` subcommand][bundle] allows you to specify a list of
 brews and casks to be installed. You can integrate this with chezmoi by creating
 a `run_once_` script. For example, create a file in your source directory called
 `run_once_before_install-packages-darwin.sh.tmpl` containing:
